@@ -3,14 +3,25 @@ from django.http import Http404
 database = [
     {
         'name':'parsa',
-        'last name':'nazer',
-        'number':'09051349047'
+        'last name':'nasdf',
+        'number':'858585'
     },
     {
         'name':'mansour',
-        'last name':'marzban',
+        'last name':'marasdf',
         'number':'01708045115'
+    },
+        {
+        'name':'amir',
+        'last name':'shir',
+        'number':'234567890'
+    },
+    {
+        'name':'alireza',
+        'last name':'asdf',
+        'number':'8596324862148562'
     }
+    
 ]
 # Create your views here.
 
@@ -22,4 +33,4 @@ def home_page(request, name):
             return render(request, "pages_app/home.html", context={'name': person['name'],'number': person['number']}) #address 
     raise Http404("user does not exist")
 def users(request):
-    return render(request,'pages_app/users', context={'database': database})
+    return render(request,'pages_app/users.html', context={'database': database})

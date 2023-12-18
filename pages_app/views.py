@@ -21,3 +21,5 @@ def home_page(request, name):
         if name == person['name']:
             return render(request, "pages_app/home.html", context={'name': person['name'],'number': person['number']}) #address 
     raise Http404("user does not exist")
+def users(request):
+    return render(request,'pages_app/users', context={'database': database})

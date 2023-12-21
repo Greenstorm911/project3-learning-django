@@ -53,3 +53,19 @@ for loop in django template tag:
             {% endfor %}
         </ul>
     </main>
+
+adding a class into admin pannel
+    1 making the modle
+    in modles 
+        class userinfo(models.Model):
+            name = models.CharField(max_length=50)
+            life = models.TextField()
+            (if use str founction u can return a the name u want as the calss name in the admin pannel)
+    2 migrateing it 
+        py manage.py makemigrations
+        py manage.py migrate
+    3 adding into admin.py 
+    from .models import userinfo
+    admin.site.register(userinfo)
+    4 creating a superuser to accsessing those data : python manage.py createsuperuser
+

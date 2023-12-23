@@ -60,6 +60,8 @@ adding a class into admin pannel
         class userinfo(models.Model):
             name = models.CharField(max_length=50)
             life = models.TextField()
+            offon = models.BoolenField()
+            view = modles.IntegrField()
             (if use str founction u can return a the name u want as the calss name in the admin pannel)
     2 migrateing it 
         py manage.py makemigrations
@@ -68,4 +70,5 @@ adding a class into admin pannel
     from .models import userinfo
     admin.site.register(userinfo)
     4 creating a superuser to accsessing those data : python manage.py createsuperuser
+
 

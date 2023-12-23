@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     #my_apps
     'pages_app',
-    'user_info_app'
+    'user_info_app',
+    'iteams_app'
 ]
 
 MIDDLEWARE = [
